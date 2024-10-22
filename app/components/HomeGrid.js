@@ -6,6 +6,8 @@ import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
 import Education from "./Education";
 import Contact from "./Contact";
+import Resume from "./Resume";
+import Misc from "./Misc";
 
 export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);
@@ -111,10 +113,10 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             style={trails[5]}
             className="h-full w-full relative border border-neutral-900 bg-[#2A9D8F]"
           >
-            <h1>blog</h1>
+            <Resume />
           </animated.div>
         </animated.div>
-         <animated.div
+        <animated.div
           style={animatedStyles}
           className="md:row-span-3 md:col-span-2"
         >
@@ -122,9 +124,8 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             style={trails[6]}
             className="h-full w-full relative border border-neutral-900 bg-[#e76f51]"
           >
-            <h1>me</h1>
+            <Misc />
           </animated.div>
-          
         </animated.div>
         <animated.div
           style={animatedStyles}
@@ -137,7 +138,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             <Contact />
           </animated.div>
         </animated.div>
-       
+
         {/* <animated.div
             style={animatedStyles}
             className="md:row-span-2 md:col-span-2"
