@@ -5,6 +5,7 @@ import { GRIDS } from "../constants";
 import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
 import Education from "./Education";
+import Contact from "./Contact";
 
 export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);
@@ -104,14 +105,26 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
         </animated.div>
         <animated.div
           style={animatedStyles}
-          className="md:row-span-4 md:col-span-2"
+          className="md:row-span-6 md:col-span-2"
         >
           <animated.div
             style={trails[5]}
             className="h-full w-full relative border border-neutral-900 bg-[#2A9D8F]"
           >
-            <h1>Resume</h1>
+            <h1>blog</h1>
           </animated.div>
+        </animated.div>
+         <animated.div
+          style={animatedStyles}
+          className="md:row-span-3 md:col-span-2"
+        >
+          <animated.div
+            style={trails[6]}
+            className="h-full w-full relative border border-neutral-900 bg-[#e76f51]"
+          >
+            <h1>me</h1>
+          </animated.div>
+          
         </animated.div>
         <animated.div
           style={animatedStyles}
@@ -121,22 +134,11 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             style={trails[4]}
             className="h-full w-full border border-black md:flex justify-between items-center p-10 gap-5 bg-[#94d1ee]"
           >
-            <h1>contact</h1>
+            <Contact />
           </animated.div>
         </animated.div>
-        <animated.div
-          style={animatedStyles}
-          className="md:row-span-3 md:col-span-2"
-        >
-          <animated.div
-            style={trails[6]}
-            className="h-full w-full relative border border-neutral-900 bg-[#F4A261]"
-          >
-            <h1>Resume</h1>
-          </animated.div>
-          
-        </animated.div>
-        <animated.div
+       
+        {/* <animated.div
             style={animatedStyles}
             className="md:row-span-2 md:col-span-2"
           >
@@ -146,7 +148,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             >
               <h1>Me</h1>
             </animated.div>
-          </animated.div>
+          </animated.div> */}
       </animated.div>
     </>
   );
