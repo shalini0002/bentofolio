@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useTrail, animated, easings, useScroll } from "@react-spring/web";
 
 import { GRIDS } from "../constants";
+import WorkExperience from "./WorkExperience";
+import Projects from "./Projects";
+import Education from "./Education";
 
 export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);
@@ -48,7 +51,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             style={trails[1]}
             className="relative bg-[#F4A261] border border-black h-full w-full"
           >
-            <h1>gdjfhsdljfh</h1>
+            <WorkExperience />
           </animated.div>
         </animated.div>
         {/* //projects */}
@@ -61,7 +64,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             style={trails[3]}
             className="relative h-full w-full bg-[#2A9D8F] border border-black"
           >
-            <h1>Projects!</h1>
+            <Projects />
           </animated.div>
         </animated.div>
         {/* //education */}
@@ -73,7 +76,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
             style={trails[2]}
             className="relative h-full w-full bg-[#9ad1ea] border border-neutral-900"
           >
-            <h1>Education</h1>
+            <Education />
           </animated.div>
         </animated.div>
 
